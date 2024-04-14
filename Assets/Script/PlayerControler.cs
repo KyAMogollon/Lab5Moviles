@@ -1,7 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-using UnityEngine.SceneManagement;
 
 public class PlayerControler : MonoBehaviour
 {
@@ -88,7 +87,15 @@ public class PlayerControler : MonoBehaviour
             if (live <= 0)
             {
                 puntaje.ResetCurrentScore();
-                SceneManager.LoadScene("Results");
+                if(Giroscopio == true)
+                {
+                    SceneGlobalManager.Instance.SceneNext("UnloadSelecctionGyroscope");
+                }
+                else if(Acelerometro==true)
+                {
+                    SceneGlobalManager.Instance.SceneNext("UnloadSelecctionAccelerometer");
+
+                }
             }
         }
     }

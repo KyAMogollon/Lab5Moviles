@@ -2,8 +2,6 @@ using System.Collections;
 using System.Collections.Generic;
 using Unity.VisualScripting;
 using UnityEngine;
-using UnityEngine.U2D;
-using UnityEngine.SceneManagement;
 
 public class SelectionCharacter : SingletonGenericPersist<SelectionCharacter>
 {
@@ -54,7 +52,7 @@ public class SelectionCharacter : SingletonGenericPersist<SelectionCharacter>
     {
         if (name != TypePath.none)
         {
-            SceneManager.LoadScene("SelecctionGame");
+            SceneGlobalManager.Instance.SelectionCharacter();
         }
     }
 }
