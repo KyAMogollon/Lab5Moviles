@@ -17,7 +17,7 @@ public class ObjectPoolStatic : MonoBehaviour
         GameObject tmp;
         for (int i = 0; i < maxQuantity; i++)
         {
-            tmp = Instantiate(objPref, transform.position, transform.rotation);
+            tmp = Instantiate(objPref, transform.position, objPref.transform.rotation);
             objectPool.Add(tmp);
             tmp.transform.SetParent(this.transform);
             tmp.SetActive(false);
