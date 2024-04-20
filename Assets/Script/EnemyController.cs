@@ -29,6 +29,7 @@ public class EnemyController : MonoBehaviour
     }
     public void SpawnEnemy()
     {
+        
         int rnd = Random.Range(0, target.Length);
         int rnd2 = Random.Range(0, target.Length);
         GameObject obj = pool.RequestBullet();

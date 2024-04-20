@@ -17,6 +17,7 @@ public class PlayerControler : MonoBehaviour
     public bool Acelerometro;
     [SerializeField] ObjectPoolDinamic poolDinamic;
     [SerializeField] GameManager _gm;
+    [SerializeField] AudioClip _audioClip;
     // Start is called before the first frame update
     void Start()
     {
@@ -76,6 +77,7 @@ public class PlayerControler : MonoBehaviour
     {
         Debug.Log("Estoy invocando");
         poolDinamic.GetObject(transform.position);
+        AudioController.Instance.EjecutarSonidoDisparo(_audioClip);
     }
     private void OnTriggerEnter2D(Collider2D collision)
     {
