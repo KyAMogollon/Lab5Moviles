@@ -2,12 +2,14 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using TMPro;
 
 public class ResultManager : MonoBehaviour
 {
-    public Text scoreActual;
-    public Text scoreHigh;
     public PuntajeSO puntaje;
+    public TMP_Text scoreActual;
+    public TMP_Text scoreHigh;
+
 
     private void Start()
     {
@@ -22,5 +24,13 @@ public class ResultManager : MonoBehaviour
     public void Select()
     {
         SceneGlobalManager.Instance.LoadResults();
+    }
+    public void Game()
+    {
+        SceneGlobalManager.Instance.LoadGame();
+    }
+    public void Menu()
+    {
+        SceneGlobalManager.Instance.LoadMenu();
     }
 }

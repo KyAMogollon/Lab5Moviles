@@ -2,12 +2,13 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using TMPro;
 
 public class GameManager : MonoBehaviour
 {
     private float contador;
-    public Text tx;
-    public Text live;
+    public TMP_Text score;
+    public TMP_Text live;
     public PuntajeSO puntaje;
     [SerializeField] PlayerControler player;
     // Start is called before the first frame update
@@ -21,7 +22,7 @@ public class GameManager : MonoBehaviour
     {
         contador += 1 * (Time.deltaTime*player.velocityHorizontal);
         puntaje.UpdateScore((int)contador);
-        tx.text = "Puntaje: " + (int)contador;
+        score.text = "Puntaje: " + (int)contador;
     }
     public void LifeText(int vida)
     {

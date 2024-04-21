@@ -76,4 +76,14 @@ public class SceneGlobalManager : SingletonGenericPersist<SceneGlobalManager>
     {
         SceneManager.UnloadSceneAsync("Results");
     }
+    public void LoadGame()
+    {
+        Invoke("UnloadResults", 0.1f);
+        SceneManager.LoadSceneAsync("GameGyroscope", LoadSceneMode.Additive);
+    }
+    public void LoadMenu()
+    {
+        Invoke("UnloadResults", 0.1f);
+        SceneManager.LoadSceneAsync("Start", LoadSceneMode.Additive);
+    }
 }
