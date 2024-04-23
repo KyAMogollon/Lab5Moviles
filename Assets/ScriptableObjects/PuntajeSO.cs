@@ -14,7 +14,6 @@ public class PuntajeSO : ScriptableObject
         if (currentScore > highScore)
         {
             highScore = currentScore;
-
         }
     }
     public void ResetCurrentScore()

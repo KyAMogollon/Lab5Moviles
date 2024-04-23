@@ -61,14 +61,14 @@ public class PlayerControler : MonoBehaviour
             float x = gyroscope.rotationRateUnbiased.x;
             float inputY = x;
 
-            transform.Translate(-inputY * velocityVertical * Time.deltaTime, 0, 0);
+            transform.Translate(0, -inputY * velocityVertical * Time.deltaTime, 0);
         }
 
         if (Acelerometro == true)
         {
             float inputY = Input.acceleration.y;
 
-            transform.Translate(-inputY * velocityVertical * Time.deltaTime, 0, 0);
+            transform.Translate(0, -inputY * velocityVertical * Time.deltaTime, 0);
         }
 
 

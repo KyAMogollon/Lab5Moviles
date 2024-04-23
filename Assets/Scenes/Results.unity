@@ -155,6 +155,10 @@ MonoBehaviour:
   puntaje: {fileID: 11400000, guid: 6197cee59ae99254d9a7832c35b2e1dd, type: 2}
   scoreActual: {fileID: 169531959}
   scoreHigh: {fileID: 1102743047}
+  notification: {fileID: 2034846660}
+  dataSO:
+  - {fileID: 11400000, guid: 2f338af645113484a8a646615f43abec, type: 2}
+  - {fileID: 11400000, guid: 9a22896a51dabb34ab98e37eaa4a38bf, type: 2}
 --- !u!4 &141794949
 Transform:
   m_ObjectHideFlags: 0
@@ -768,7 +772,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: 'PuntajeActual: '
+  m_text: 'PuntajeMaximo: '
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: bfd3e4f22c0e6c443978a40365984b22, type: 2}
   m_sharedMaterial: {fileID: -2353502802049684743, guid: bfd3e4f22c0e6c443978a40365984b22, type: 2}
@@ -1716,6 +1720,50 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1778191804}
   m_CullTransparentMesh: 1
+--- !u!1 &2034846659
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 2034846661}
+  - component: {fileID: 2034846660}
+  m_Layer: 0
+  m_Name: Notifications
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &2034846660
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2034846659}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: afdf62ba5a0b9ad4d82d686d21c9f06f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!4 &2034846661
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2034846659}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: -2.2484553, y: 3.9805188, z: -0.055296946}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1660057539 &9223372036854775807
 SceneRoots:
   m_ObjectHideFlags: 0
@@ -1724,3 +1772,4 @@ SceneRoots:
   - {fileID: 1722933713}
   - {fileID: 954247968}
   - {fileID: 141794949}
+  - {fileID: 2034846661}
